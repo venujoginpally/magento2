@@ -60,6 +60,14 @@ class Source implements \IteratorAggregate, \Countable, SourceProviderInterface
         $this->customerCollection->addFieldToSelect($fieldName, $alias);
         return $this;
     }
+     /**
+     * {@inheritdoc}
+     */
+    public function addAttributeToSelect($fieldName, $alias = null)
+    {
+        $this->customerCollection->addAttributeToSelect($fieldName, $alias);
+        return $this;
+    }
 
     /**
      * {@inheritdoc}
